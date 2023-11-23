@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NeILF++: Inter-reflectable Light Fields for Geometry and Material Estimation</title>
+    <title>JointNet: Extending Text-to-Image Diffusion for Dense Distribution Modeling</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,22 +32,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>NeILF++: Inter-reflectable Light Fields for Geometry and Material Estimation</h1>
-                        <h4 style="color:#5a6268;"> ICCV 2023 </h4>
+                        <h1>JointNet: Extending Text-to-Image Diffusion for Dense Distribution Modeling</h1>
+                        <h4 style="color:#5a6268;"> Under review </h4>
                         <hr>
                         <h5> <a href="https://scholar.google.com/citations?user=diIjfmMAAAAJ&hl=en" target="_blank">Jingyang Zhang<sup>1</sup></a>, 
-                            <a href="https://yoyo000.github.io/" target="_blank">Yao Yao<sup>2 <i class="fa fa-envelope"></i></sup></a>, 
                             <a href="https://scholar.google.com.hk/citations?user=YR1MdT0AAAAJ&hl=en" target="_blank">Shiwei Li<sup>1</sup></a>, 
-                            <a href="https://scholar.google.com.hk/citations?user=kPZVXzoAAAAJ&hl=en" target="_blank">Jingbo Liu<sup>1</sup></a>, 
+                            <a href="https://scholar.google.com.hk/citations?user=ZBozF3sAAAAJ&hl=en" target="_blank">Yuanxun Lu<sup>3</sup></a>, 
                             <a href="https://scholar.google.com.hk/citations?user=CtpU8mUAAAAJ&hl=en" target="_blank">Tian Fang<sup>1</sup></a>, 
                             <a href="https://scholar.google.com.hk/citations?user=IXJm9jAAAAAJ&hl=en" target="_blank">David McKinnon<sup>1</sup></a>, 
                             <a href="https://scholar.google.com.hk/citations?user=pa09Db8AAAAJ&hl=en" target="_blank">Yanghai Tsin<sup>1</sup></a>, 
-                            <a href="https://www.cse.ust.hk/~quan/" target="_blank">Long Quan<sup>3</sup></a> </h5>
-                        <h5 style="color:#000000;"> <sup>1</sup>Apple, <sup>2</sup>Nanjing University, <sup>3</sup>HKUST  </h5>
+                            <a href="https://www.cse.ust.hk/~quan/" target="_blank">Long Quan<sup>2</sup></a>
+                            <a href="https://yoyo000.github.io/" target="_blank">Yao Yao<sup>3 <i class="fa fa-envelope"></i></sup></a>
+                        </h5>
+                        <h5 style="color:#000000;"> <sup>1</sup>Apple, <sup>2</sup>HKUST, <sup>3</sup>Nanjing University</h5>
                         <br>
-                        <p><a class="btn btn-secondary btn-lg" href="https://arxiv.org/abs/2303.17147" role="button">Paper</a> <a
-                                class="btn btn-secondary btn-lg" href="https://github.com/apple/ml-neilfpp" role="button">Code</a> <a
-                                class="btn btn-secondary btn-lg" href="https://apple.ent.box.com/s/2ulz3kjtca53aj3qlwjwyv27zfuug2x5" role="button">Data</a> </p>
+                        <p>
+                            <a class="btn btn-secondary btn-lg" href="https://arxiv.org/abs/2310.06347" role="button">Paper</a>
+                            <!-- <a class="btn btn-secondary btn-lg" href="https://github.com/apple/ml-neilfpp" role="button">Code</a> -->
+                            <!-- <a class="btn btn-secondary btn-lg" href="https://apple.ent.box.com/s/2ulz3kjtca53aj3qlwjwyv27zfuug2x5" role="button">Data</a> -->
+                        </p>
                     </div>
                 </div>
             </div>
@@ -62,52 +65,19 @@
                     <h2>Abstract</h2>
                     <hr style="margin-top:0px">
 
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_cam_normal_VolSDF.jpg" alt="VolSDF Normal" />
-                            <img src="img/dtu_cam_normal_NeILF++.jpg" alt="Our Normal" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_cam_base_NeILF.jpg" alt="NeILF Base Color" />
-                            <img src="img/dtu_cam_base_NeILF++.jpg" alt="Our Base Color" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_cam_render_NeILF.jpg" alt="NeILF Rendering" />
-                            <img src="img/dtu_cam_render_NeILF++.jpg" alt="Our Rendering" />
-                        </div>
-                    </div>
-                    <br>
-        
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_11_normal_VolSDF.jpg" alt="VolSDF Normal" />
-                            <img src="img/dtu_11_normal_NeILF++.jpg" alt="Our Normal" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_11_base_NeILF.jpg" alt="NeILF Base Color" />
-                            <img src="img/dtu_11_base_NeILF++.jpg" alt="Our Base Color" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/dtu_11_render_NeILF.jpg" alt="NeILF Rendering" />
-                            <img src="img/dtu_11_render_NeILF++.jpg" alt="Our Rendering" />
-                        </div>
-                    </div>
-                    <br>
+                    <img class="img-fluid" src="img/teaser.png" alt=""><br><br>
 
-                    <p class="text-left">We present a novel differentiable rendering framework for joint geometry,
-                        material, and lighting estimation from multi-view images. In contrast to previous methods which
-                        assume a simplified environment map or co-located flashlights, in this work, we formulate the
-                        lighting of a static scene as one neural incident light field (NeILF) and one outgoing neural
-                        radiance field (NeRF). The key insight of the proposed method is the union of the incident and
-                        outgoing light fields through physically-based rendering and inter-reflections between surfaces,
-                        making it possible to disentangle the scene geometry, material, and lighting from image
-                        observations in a physically-based manner. The proposed incident light and inter-reflection
-                        framework can be easily applied to other NeRF systems. We show that our method can not only
-                        decompose the outgoing radiance into incident lights and surface materials, but also serve as a
-                        surface refinement module that further improves the reconstruction detail of the neural surface.
-                        We demonstrate on several datasets that the proposed method is able to achieve state-of-the-art
-                        results in terms of the geometry reconstruction quality, material estimation accuracy, and the
-                        fidelity of novel view rendering.
+                    <p class="text-left">We introduce JointNet, a novel neural network architecture for modeling 
+                        the joint distribution of images and an additional dense modality (e.g., depth maps). 
+                        JointNet is extended from a pre-trained text-to-image diffusion model, where a copy of 
+                        the original network is created for the new dense modality branch and is densely connected 
+                        with the RGB branch. The RGB branch is locked during network fine-tuning, which enables 
+                        efficient learning of the new modality distribution while maintaining the strong 
+                        generalization ability of the large-scale pre-trained diffusion model.
+                        We demonstrate the effectiveness of JointNet by using RGBD diffusion as an example 
+                        and through extensive experiments, showcasing its applicability in a variety of 
+                        applications, including joint RGBD generation, dense depth prediction, depth-conditioned 
+                        image generation, and coherent tile-based 3D panorama generation.
                     </p>
 
                 </div>
@@ -128,130 +98,18 @@
                 </div>
             </div>
 
-            <img class="img-fluid" src="img/pipeline.png" alt="">
+            <img class="img-fluid" src="img/jointnet-arch.png" alt="">
             <br>
             <br>
 
+            <p>Inspired by ControlNet, we use a copy of the original diffusion model to deal with the additional joint modality. To establish information communication, the two branches are densely connected. All the exchanging tensors are transformed by an additional zero-initialized convolution layer so that the forward pass is unchanged before any fine-tuning.</p>
 
-            <ul>
-                <li>A general light field representation by unifying the neural incident light field (<b>NeILF</b>) and
-                    neural radiance field (<b>NeRF</b>) through <b>physically-based rendering</b> and
-                    <b>inter-reflection</b> between surfaces.</li>
-                <li>An optimization scheme for the <b>joint estimation</b> of geometry, material, and lighting.</li>
-                <li>A real-world <b>linear HDR dataset</b> for material estimation and other neural rendering tasks.
-                </li>
-                <li>Can be easily applied to the NeRF family for <b>material decomposition</b> and <b>surface
-                        refinement</b></li>
-            </ul>
+            <br>
+            <img class="img-fluid" src="img/train-progress.png" alt="">
+            <br>
+            <br>
 
-        </div>
-    </section>
-    <br>
-    <br>
-
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Inter-reflection</h2>
-                </div>
-            </div>
-            <hr style="margin-top:0px">
-
-            <div class="row">
-                <div class="col-12 text-center">
-
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/syn_base_wo_ir.png" alt="Base. w/o IR" />
-                            <img src="img/syn_base_w_ir.png" alt="Base. w. IR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/syn_roughness_wo_ir.png" alt="Roug. w/o IR" />
-                            <img src="img/syn_roughness_w_ir.png" alt="Roug. w. IR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/syn_metallic_wo_ir.png" alt="Meta. w/o IR" />
-                            <img src="img/syn_metallic_w_ir.png" alt="Meta. w. IR" />
-                        </div>
-                    </div>
-                    <br>
-
-
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/syn_neilf_wo_ir.png" alt="Incident Lights at point x1 w/o IR" />
-                            <img src="img/syn_neilf_w_ir.png" alt="Incident Lights at point x1 w. IR" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <br>
-    <br>
-
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>HDR vs LDR</h2>
-                </div>
-            </div>
-            <hr style="margin-top:0px">
-
-            <div class="row">
-                <div class="col-12 text-center">
-
-                    <p class="text-left">
-                        As the commonly used LDR images are usually processed by unknown non-linear
-                        tone-mapping, gamma correction, and value clipping, it may result in inaccurate
-                        material and lighting estimation if we directly supervise the rendering value
-                        with the LDR ground truth.
-                    </p>
-
-                    <p class="text-left">
-                        Therefore, we constructed a real-world linear HDR dataset (by using Apple Internal tools) 
-                        for material estimation and neural rendering related tasks. Comparisons between
-                        reconstructions using LDR and HDR images are visualized below.
-                    </p>
-
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/cat_base_ldr.png" alt="Base Color w. LDR" />
-                            <img src="img/cat_base_hdr.png" alt="Base Color w. HDR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/cat_roughness_ldr.png" alt="Roug. w. LDR" />
-                            <img src="img/cat_roughness_hdr.png" alt="Roug. w. HDR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/cat_metallic_ldr.png" alt="Meta. w. LDR" />
-                            <img src="img/cat_metallic_hdr.png" alt="Meta. from HDR" />
-                        </div>
-                    </div>
-                    <br>
-
-                    <div class="b-row">
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/shoe_base_ldr.png" alt="Base. w. LDR" />
-                            <img src="img/shoe_base_hdr.png" alt="Base. w. HDR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/shoe_roughness_ldr.png" alt="Roug. w. LDR" />
-                            <img src="img/shoe_roughness_hdr.png" alt="Roug. w. HDR" />
-                        </div>
-                        <div class="b-dics" style="width: 100%">
-                            <img src="img/shoe_metallic_ldr.png" alt="Meta. w. LDR" />
-                            <img src="img/shoe_metallic_hdr.png" alt="Meta. w. HDR" />
-                        </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
+            <p>Compared to the trivial solution that zero-expands the first and the last convolution layer (Direct Extend), JointNet provides smooth transition to joint training and thus prevents catastrophic forgetting. Otherwise, the RGB generation capability is degraded in early iterations and then gradually recovers by learning from the new dataset from scratch. </p>
 
         </div>
     </section>
@@ -262,48 +120,250 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>Relighting</h2>
+                    <h2>Joint Generation</h2>
                 </div>
             </div>
             <hr style="margin-top:0px">
+            <!-- 4 10 26 33 46 48 -->
 
-            <!-- <div class="b-row">
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/dtu_scan110_geometry0001-0060.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/dtu_scan110_city0001-0060.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/dtu_scan110_studio0001-0060.mp4" type="video/mp4">
-                </video>
+            <div class="row">
+                <div class="col-12 text-center">
+
+                    <div class="b-row">
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817_sd21b/000000000004.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817_sd21b_joint/000000000004.png"/>
+                        </div>
+                        <!-- <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000010.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000010.png"/>
+                        </div> -->
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000026.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000026.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000033.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000033.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000046.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000046.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000048.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000048.png"/>
+                        </div>
+                    </div>
+                    <div class="b-row">
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000018.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000018.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000027.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000027.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000031.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000031.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000032.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000032.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b/000000000049.png"/>
+                            <img src="img/joint-gen/rgbdv2_0817f_sd21b_joint/000000000049.png"/>
+                        </div>
+                    </div>
+
+                    <div class="b-row">
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000004.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000004.png"/>
+                        </div>
+                        <!-- <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000010.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000010.png"/>
+                        </div> -->
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817_sd21b/000000000026.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817_sd21b_joint/000000000026.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000033.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000033.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000046.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000046.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000048.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000048.png"/>
+                        </div>
+                    </div>
+                    <div class="b-row">
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000018.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000018.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000027.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000027.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817_sd21b/000000000031.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817_sd21b_joint/000000000031.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000032.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000032.png"/>
+                        </div>
+                        <div class="b-dics" style="width: 100%">
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b/000000000049.png"/>
+                            <img src="img/joint-gen/rgbnv2_0817f_sd21b_joint/000000000049.png"/>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <br> -->
             
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Bi-directional Image-Depth Conversion</h2>
+                </div>
+            </div>
+            <hr style="margin-top:0px">
+
+            <p class="text-left">
+                After capturing the joint image/depth distribution, the bi-directional conversion can be modeled as channel-wise inpainting. 
+            </p>
 
             <div class="b-row">
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_lucky_cat_geometry0001-0125.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_lucky_cat_city0001-0125.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_lucky_cat_studio0001-0125.mp4" type="video/mp4">
-                </video>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/i2d_in_1.jpg" alt="Input"/>
+                    <img src="img/d2rgb/i2d_out_1.jpg" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/i2d_in_5.jpg" alt="Input"/>
+                    <img src="img/d2rgb/i2d_out_5.jpg" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/i2d_in_3.jpg" alt="Input"/>
+                    <img src="img/d2rgb/i2d_out_3.jpg" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/i2d_in_4.jpg" alt="Input"/>
+                    <img src="img/d2rgb/i2d_out_4.jpg" alt="Output"/>
+                </div>
             </div>
 
             <div class="b-row">
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_typewritter_geometry0001-0125.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_typewritter_city0001-0125.mp4" type="video/mp4">
-                </video>
-                <video width="33%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/videos/hdr_typewritter_studio0001-0125.mp4" type="video/mp4">
-                </video>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/example1_depth.png" alt="Input"/>
+                    <img src="img/d2rgb/old_man_wearing_vr_34_image.png" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/example1_depth.png" alt="Input"/>
+                    <img src="img/d2rgb/old_man_wearing_vr_43_image.png" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/example2_depth.png" alt="Input"/>
+                    <img src="img/d2rgb/robot_sitting_on_stairs_02_image.png" alt="Output"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/d2rgb/example2_depth.png" alt="Input"/>
+                    <img src="img/d2rgb/robot_sitting_on_stairs_08_image.png" alt="Output"/>
+                </div>
             </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>High-res Depth Refinement</h2>
+                </div>
+            </div>
+            <hr style="margin-top:0px">
+
+            <p class="text-left">
+                The low-res depth maps from MiDaS can be upsampled and refined by tile-based diffusion.
+            </p>
+
+            <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/depthsr/0.jpg" alt="Input"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/depthsr/000000000000-joint.png" alt="MiDaS"/>
+                    <img src="img/depthsr/00000_depth_resize.png" alt="Refined"/>
+                </div>
+            </div>
+            <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/depthsr/725.jpg" alt="Input"/>
+                </div>
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/depthsr/000000000725-joint.png" alt="MiDaS"/>
+                    <img src="img/depthsr/00725_depth_resize.png" alt="Refined"/>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>RGBD Panorama Generation</h2>
+                </div>
+            </div>
+            <hr style="margin-top:0px">
+
+            <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/pano/A_beach_with_palm_trees_4_image.png"/>
+                    <img src="img/pano/A_beach_with_palm_trees_4_depth.png"/>
+                </div>
+            </div>
+            <p class="text-center">A beach with palm trees</p>
+            <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/pano/A_photo_of_a_beautiful_ocean_with_coral_reef_2_image.png"/>
+                    <img src="img/pano/A_photo_of_a_beautiful_ocean_with_coral_reef_2_depth.png"/>
+                </div>
+            </div>
+            <p class="text-center">A photo of a beautiful ocean with coral reef</p>
+            <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/pano/A_photo_of_a_botanical_garden_13_image.png"/>
+                    <img src="img/pano/A_photo_of_a_botanical_garden_13_depth.png"/>
+                </div>
+            </div>
+            <p class="text-center">A photo of a botanical garden</p>
+            <!-- <div class="b-row">
+                <div class="b-dics" style="width: 100%">
+                    <img src="img/pano/A_photo_of_a_garden_with_cherry_blossoms_9_image.png"/>
+                    <img src="img/pano/A_photo_of_a_garden_with_cherry_blossoms_9_depth.png"/>
+                </div>
+            </div> -->
 
         </div>
     </section>
@@ -317,15 +377,13 @@
                     <h2>Citation</h2>
                     <hr style="margin-top:0px">
                     <div class="bibtexsection">
-                        <pre><code>
-    @article{zhang2023neilf++,
-        title={NeILF++: Inter-reflectable Light Fields for Geometry and Material Estimation},
-        author={Zhang, Jingyang and Yao, Yao and Li, Shiwei and Liu, Jingbo and Fang, Tian and McKinnon,
-        David and Tsin, Yanghai and Quan, Long},
-        journal={International Conference on Computer Vision (ICCV)},
-        year={2023}
-    }
-                        </code>
+  @article{zhang2023jointnet,
+      title={JointNet: Extending Text-to-Image Diffusion for Dense Distribution Modeling},
+      author={Zhang, Jingyang and Li, Shiwei and Lu, Yuanxun and Fang, Tian and 
+              McKinnon, David and Tsin, Yanghai and Quan, Long and Yao, Yao},
+      journal={arXiv preprint arXiv:2310.06347},
+      year={2023}
+  }
                     </div>
                 </div>
             </div>
